@@ -1,0 +1,11 @@
+html[isplaying=true] {
+    .play-svg {
+        display: none;
+    }
+}
+
+html[isplaying=false] {
+    .pause-svg {
+        display: none;
+    }
+}

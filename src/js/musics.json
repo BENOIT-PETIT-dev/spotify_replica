@@ -1,0 +1,187 @@
+{
+    "songs": [
+        {
+            "name": "LE PIÈGE",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 1,
+            "albumorder": 1,
+            "duration": "03:36",
+            "feat": null
+        },
+        {
+            "name": "STARSKY & HUTCH",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 2,
+            "albumorder": 2,
+            "duration": "02:22",
+            "feat": null
+        },
+        {
+            "name": "STUPÉFIANT ET NOIR",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 3,
+            "albumorder": 3,
+            "duration": "03:09",
+            "feat": null
+        },
+        {
+            "name": "FLAMME OLYMPIQUE",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 4,
+            "albumorder": 4,
+            "duration": "03:01",
+            "feat": null
+        },
+        {
+            "name": "LE TOUR",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 5,
+            "albumorder": 5,
+            "duration": "03:09",
+            "feat": "Infinit'"
+        },
+        {
+            "name": "CASCADE (remix)",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 6,
+            "albumorder": 6,
+            "duration": "02:36",
+            "feat": null
+        },
+        {
+            "name": "PARACHUTE CHANNEL",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 7,
+            "albumorder": 7,
+            "duration": "04:00",
+            "feat": "Sneazzy"
+        },
+        {
+            "name": "LANGAGE CRYPTÉ",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 8,
+            "albumorder": 8,
+            "duration": "03:39",
+            "feat": null
+        },
+        {
+            "name": "POUR CELLES",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 9,
+            "albumorder": 9,
+            "duration": "03:03",
+            "feat": null
+        },
+        {
+            "name": "OLIVE & TOM",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 10,
+            "albumorder": 10,
+            "duration": "02:48",
+            "feat": null
+        },
+        {
+            "name": "1500",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 11,
+            "albumorder": 11,
+            "duration": "05:03",
+            "feat": "Og L'enf"
+        },
+        {
+            "name": "CA VA ENSEMBLE",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 12,
+            "albumorder": 12,
+            "duration": "06:59",
+            "feat": null
+        },
+        {
+            "name": "CONTREX",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 13,
+            "albumorder": 13,
+            "duration": "02:10",
+            "feat": null
+        },
+        {
+            "name": "LA LUMIÈRE DANS LE NOIR",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 14,
+            "albumorder": 14,
+            "duration": "02:49",
+            "feat": "Doums"
+        },
+        {
+            "name": "FUGEES",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 15,
+            "albumorder": 15,
+            "duration": "03:00",
+            "feat": "Diabi"
+        },
+        {
+            "name": "UNE MAIN LAVE L'AUTRE",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 16,
+            "albumorder": 16,
+            "duration": "03:03",
+            "feat": null
+        },
+        {
+            "name": "MACRO",
+            "album": "UNE MAIN LAVE L'AUTRE",
+            "artist": "Alpha Wann",
+            "id": 17,
+            "albumorder": 17,
+            "duration": "03:43",
+            "feat": null
+        },
+
+
+
+        {
+            "name": "Trip",
+            "album": "FAME",
+            "artist": "Lefa",
+            "id": 18,
+            "duration": "02:41",
+            "albumorder": 1,
+            "feat": "Tayc"
+        },
+        {
+            "name": "Mauvais",
+            "album": "FAME",
+            "artist": "Lefa",
+            "id": 19,
+            "duration": "02:26",
+            "albumorder": 2,
+            "feat": null
+        },
+        {
+            "name": "Batman",
+            "album": "FAME",
+            "artist": "Lefa",
+            "id": 20,
+            "duration": "01:36",
+            "albumorder": 3,
+            "feat": null
+        }
+    ]
+}

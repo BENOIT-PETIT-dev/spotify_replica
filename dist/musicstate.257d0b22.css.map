@@ -1,0 +1,1 @@
+{"version":3,"sources":["css\\musicstate.scss"],"names":[],"mappings":"AACI;EACI;;;AAKJ;EACI","file":"musicstate.257d0b22.css","sourceRoot":"..\\src","sourcesContent":["html[isplaying=true] {\r\n    .play-svg {\r\n        display: none;\r\n    }\r\n}\r\n\r\nhtml[isplaying=false] {\r\n    .pause-svg {\r\n        display: none;\r\n    }\r\n}"]}

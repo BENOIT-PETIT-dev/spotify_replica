@@ -1,0 +1,9 @@
+html[isplaying=true] .play-svg {
+  display: none;
+}
+
+html[isplaying=false] .pause-svg {
+  display: none;
+}
+
+/*# sourceMappingURL=/musicstate.257d0b22.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AAEA","file":"main.fb6bbcaf.js","sourceRoot":"..\\src","sourcesContent":["// import musics from './musics.json'\r\n// musics.songs.sort(function(a, b){\r\n//     return a.albumorder - b.albumorder;\r\n// });\r\n\r\n// console.log(musics.songs);\r\n\r\n\r\n\r\n"]}

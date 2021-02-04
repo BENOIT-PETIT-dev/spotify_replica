@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr" isplaying="false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.ico"/>
+    <title>Spotify replica</title>
+
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="css/musicstate.scss">
+</head>
+
+<body class="noselect">
+
+    <div id="app">
+
+        <nav class="nav-left-panel" role="navigation">
+            <div class="nav-left-panel-container">
+                <div class="global-logo-container">
+                    <a href="javascript: void(0)">
+                        <img src="assets/img/logo.png" alt="Spotify logo">
+                    </a>
+                </div>
+                <ul class="app-nav">
+                    <li class="app-nav__list-item">
+                        <a class="app-nav__link" style="background-color: #333;">
+                            <svg viewBox="0 0 512 512" width="24" height="24" style="opacity:1"><path d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z" fill="currentColor"></path></svg>
+                            <span style="color: white;">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="app-nav__list-item">
+                        <a class="app-nav__link">
+                            <img src="assets/img/search.svg">
+                            <span>Rechercher</span>
+                        </a>
+                    </li>
+                    <li class="app-nav__list-item">
+                        <a class="app-nav__link">
+                            <img src="assets/img/radio.svg">
+                            <span>Radio</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="playlist-nav-container">
+                    <div class="playlist-nav-main">
+                        <h2 class="playlist-nav-main__title">Playlists</h2>
+                        <button>
+                            <a href="javascript: void(0)">
+                                <svg shape-rendering="crispEdges" class="plus" viewBox="0 0 36 36"><path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path></svg>
+                                <span>Créer une playlist</span>
+                            </a>
+                        </button>
+                        <button>
+                            <a href="javascript: void(0)">
+                                <div class="svg-container">
+                                    <svg><path fill="none" d="M0 0h16v16H0z"></path><path d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"></path></svg>
+                                </div>
+                                <span>Titres likés</span>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="playlist-nav-user">
+                        <ul class="playlist-nav-user__list">
+                            <li>
+                                <a href="javascript: void(0)"><span>Hip-hop</span></a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)"><span>TeamBanger</span></a>
+                                <div class="svg-container">
+                                    <svg role="img" height="14" width="14" viewBox="0 0 16 16" class="Svg-ulyrgf-0 hJgLcF"><path d="M3.645 6.352a2.442 2.442 0 01-.586-1.587v-.194c0-1.339 1-2.454 2.277-2.536a2.409 2.409 0 011.833.655c.129.121.241.254.34.395.266-.197.55-.368.851-.51a3.345 3.345 0 00-.507-.615 3.42 3.42 0 00-2.581-.923c-1.802.117-3.213 1.669-3.213 3.534v.193c0 .82.293 1.614.825 2.236l.772.904s.07.081-.024.134L1.743 9.125A3.449 3.449 0 000 12.118V13h1v-.882c0-.877.474-1.691 1.24-2.125l1.891-1.088a1.089 1.089 0 00.286-1.649l-.772-.904zm10.614 5.774l-1.892-1.087c-.077-.044-.023-.134-.023-.134l.771-.904a3.446 3.446 0 00.825-2.236v-.294c0-.947-.396-1.862-1.088-2.511a3.419 3.419 0 00-2.581-.923c-1.801.117-3.212 1.67-3.212 3.535v.193c0 .82.293 1.614.825 2.236l.771.904s.059.087-.023.134l-1.889 1.086A3.45 3.45 0 005 15.118V16h1v-.882c0-.877.474-1.691 1.239-2.125l1.892-1.087a1.089 1.089 0 00.286-1.65l-.773-.904a2.447 2.447 0 01-.585-1.587v-.193c0-1.339 1-2.454 2.277-2.537a2.413 2.413 0 011.833.654c.498.467.771 1.1.771 1.781v.294c0 .582-.208 1.145-.586 1.587l-.771.904a1.09 1.09 0 00.285 1.651l1.894 1.088A2.448 2.448 0 0115 15.118V16h1v-.882a3.447 3.447 0 00-1.741-2.992z"></path></svg>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)"><span>Lofi chill</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="install-app">
+                    <a href="javascript: void(0)">
+                        <svg role="img" viewBox="0 0 24 24" class="Svg-ulyrgf-0 hJgLcF"><path d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1 22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652 4.678 5.44 4.694-5.439-.757-.653-3.439 3.984z"></path></svg>
+                        <span>Installer l'appli</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <header class="top-root">
+            <div class="container">
+                <div class="background-color">
+                    <div></div>
+                </div>
+                <div class="left-part">
+                    <button class="navigation" id="back-navigation">
+                        <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24"><polyline points="16 4 7 12 16 20" fill="none"></polyline></svg>
+                    </button>
+                    <button class="navigation" id="forward-navigation">
+                        <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24"><polyline points="8 4 17 12 8 20" fill="none"></polyline></svg>
+                    </button>
+                </div>
+                <div class="center-part">
+                    <button class="play-pause-action">
+                        <svg height="16" role="img" width="16" class="pause-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                        <svg height="16" width="16" class="play-svg" viewBox="0 0 16 16"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg>
+                    </button>
+                    <span>UNE MAIN LAVE L'AUTRE</span>
+                </div>
+                <div class="right-part">
+                    <button class="profile-widget">
+                        <img src="assets/img/profile-pic.jpg" alt="Photo de profil" class="profile-widget__photo">
+                        <span class="profile-widget__name">Benoît PETIT</span>
+                        <svg class="profile-widget__arrow" role="img" height="16" width="16" viewBox="0 0 16 16"><path d="M3 6l5 5.794L13 6z"></path></svg>
+                    </button>
+                    <div class="profile-menu">
+                        <div class="compte">
+                            <span>Compte</span>
+                            <svg role="img" height="16" width="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="profil">
+                            <span>Profil</span>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="deconnexion">
+                            <span>Déconnexion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main" role="main">
+            <div class="main__bg-gradient"></div>
+            <div class="main__container">
+                <section class="stretch-cards">
+                    <h2 class="section-title">Raccourcis</h2>
+                    <div class="cards-container">
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg" draggable="false">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <span>UNE MAIN LAVE L'AUTRE</span>
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="big-cards">
+                    <h2 class="section-title">Écoutés récemment</h2>
+                    <div class="cards-container">
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="big-cards">
+                    <h2 class="section-title">Vos albums et titres préféres</h2>
+                    <div class="cards-container">
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="big-cards">
+                    <h2 class="section-title">Vos artistes préféres</h2>
+                    <div class="cards-container">
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img class="track-cover" src="assets/img/cover.jpg">
+                            <div class="infos-container">
+                                <button class="play-pause">
+                                    <svg role="img"viewBox="0 0 24 24"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12"></polygon></svg>
+                                    <svg style="display: none" role="img" viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"></rect><rect x="15" y="3" width="4" height="18"></rect></svg>
+                                </button>
+                                <span class="title">UNE MAIN LAVE L'AUTRE</span>
+                                <span class="source">Alpha Wann</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <div class="bottom-playbar">
+            <div class="bp-cont">
+                <div class="bp-cont__left">
+                    <div class="container">
+                        <div class="image-container">
+                            <img src="assets/img/cover.jpg" alt="Cover - UNE MAIN LAVE L'AUTRE">
+                            <svg height="24" width="24" viewBox="0 0 24 24"><polygon points="15.54,21.151 5.095,12.229 15.54,3.309 16.19,4.069 6.635,12.229 16.19,20.39 "></polygon></svg>
+                        </div>
+                        <div class="text-container">
+                            <span class="playing-track">UNE MAIN LAVE L'AUTRE</span>
+                            <span class="playing-artist">Alpha Wann</span>
+                        </div>
+                        <button class="heart-container">
+                            <svg height="16" width="16" viewBox="0 0 16 16"><path d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="bp-cont__center">
+                    <div class="container">
+                        <div class="commands">
+                            <button class="random"><svg role="img" height="16" width="16" viewBox="0 0 16 16"><path d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"></path></svg></button>
+                            <button class="back"><svg role="img" height="16" width="16" viewBox="0 0 16 16"><path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path></svg></button>
+                            <button class="play-pause-action">
+                                <svg role="img" class="pause-svg" height="16" width="16" viewBox="0 0 16 16"><path fill="none" d="M0 0h16v16H0z"></path><path d="M3 2h3v12H3zM10 2h3v12h-3z"></path></svg>
+                                <svg role="img" class="play-svg" height="16" width="16" viewBox="0 0 16 16"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg>
+                            </button>
+                            <button class="forward"><svg role="img" height="16" width="16" viewBox="0 0 16 16"><path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path></svg></button>
+                            <button class="repeat"><svg role="img" height="16" width="16" viewBox="0 0 16 16"><path d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z"></path></svg></button>
+                        </div>
+                        <div class="progress-bar">
+                            <span class="progress-bar__time"></span>
+                            <div class="progress-bar__bar">
+                                <div class="progress-bar__bar__background">
+                                    <div class="progress-bar__bar__time">
+                                        <button id="progress-bar__button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="progress-bar__duration"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bp-cont__right">
+                    <div class="container">
+                        <div class="left-part">
+                            <button class="spoticon-queue-16"></button>
+                            <button class="spoticon-devices-16"></button>
+                        </div>
+                        <div class="right-part">
+                            <div class="volume-bar">
+                                <button class="spoticon-volume-onewave-16 volume-icon"></button>
+                                <div class="volume-bar__bar">
+                                    <div class="volume-bar__bar__background">
+                                        <div class="volume-bar__bar__volume">
+                                            <button id="volume-bar__button"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="playback" src="assets/musics/6.mp3"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="js/musics.json"></script>
+    <script src="js/progress_bar.js"></script>
+    <script src="js/volume.js"></script>
+    <script src="js/profile_popup.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
